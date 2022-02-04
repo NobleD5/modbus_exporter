@@ -1,0 +1,75 @@
+PLC001:
+  device_modbus_id: 1 # default
+  device_timeout: 300ms
+  device_request_delay: 1000ms
+  device_zero_based_addressing: false
+  device_labels:
+    vendor: WAGO
+    location: DC-2
+  device_registers:
+    - register_name: QF1_OnOff
+      register_si_name: bool
+      register_type: word
+      register_byte_order: big_endian
+      register_address: "dec#380"
+      # register_address: "hex#2ee0"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: word
+    - register_name: QF1_U_AN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#300"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
+    - register_name: QF1_U_BN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#301"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
+    - register_name: QF1_U_CN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#302"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
+    - register_name: QF2_OnOff
+      register_si_name: bool
+      register_type: word
+      register_byte_order: big_endian
+      register_address: "dec#381"
+      # register_address: "hex#2ee0"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: word
+    - register_name: QF2_U_AN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#320"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
+    - register_name: QF2_U_BN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#321"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
+    - register_name: QF2_U_CN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#322"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16

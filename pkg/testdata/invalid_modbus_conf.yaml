@@ -1,0 +1,6 @@
+devices:
+
+  - device: PLC001
+    device_transport: tcp
+    device_ip: 172.20.32.46
+    device_port: 502

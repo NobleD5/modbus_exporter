@@ -1,0 +1,23 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"strings"
+	"testing"
+
+	"../structures"
+
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/testutil"
+)
+
+func TestGenerator(t *testing.T) {
+
+	if err != nil {
+		t.Errorf("CollectAndCompare() : test FAILED, %s", err)
+	} else {
+		t.Log("CollectAndCompare() : test PASSED.")
+	}
+
+}

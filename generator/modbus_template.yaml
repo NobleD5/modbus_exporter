@@ -1,0 +1,40 @@
+dev_a:
+  repeat: 2
+  dev_labels:
+    vendor: Foo
+    location: DC
+  dev_regs_sections:
+  - section_name: 'voltage'
+    section_labels:
+      protocol: MODBUS
+    section_regs:
+    - regs_array: '{256...260}:word'
+      regs_labels:
+        type: word
+    - regs_array: '{1200...1211}:dword'
+      regs_labels:
+        type: dword
+  - section_name: 'power'
+    section_labels:
+      protocol: MODBUS
+    section_regs:
+    - regs_array: '{330...350}:int16'
+      regs_labels:
+        type: word
+
+dev_b:
+  repeat: 1
+  dev_labels:
+    vendor: Bar
+    location: DC
+  dev_regs_sections:
+  - section_name: 'current'
+    section_labels:
+      protocol: MODBUS
+    section_regs:
+    - regs_array: '{100...105}:uint16'
+      regs_labels:
+        type: bool
+    - regs_array: '{118...148}:int32'
+      regs_labels:
+        type: int32

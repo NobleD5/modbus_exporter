@@ -1,0 +1,58 @@
+PLC001:
+  device_modbus_id: 1 # default
+  device_timeout: 300ms
+  device_request_delay: 1000ms
+  device_labels:
+    vendor: foo
+    location: data center 1
+  device_registers:
+    - register_name: QF1_OnOff
+      register_si_name: bool
+      register_type: word
+      register_byte_order: big_endian
+      register_address: "hex#2ee0"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: word
+    - register_name: QF1_U_AN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#300"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
+
+PLC002:
+  device_modbus_id: 15
+  device_timeout: 300ms
+  device_request_delay: 1000ms
+  device_labels:
+    vendor: bar
+    location: data center 2
+  device_registers:
+    - register_name: QF1_I_AN
+      register_si_name: current
+      register_type: uint32
+      register_byte_order: big_endian
+      register_word_order: swapped
+      register_address: "dec#300"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint32
+    - register_name: QF1_I_BN
+      register_si_name: voltage
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#301"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
+    - register_name: QF1_I_CN
+      register_si_name: current
+      register_type: uint16
+      register_byte_order: big_endian
+      register_address: "dec#302"
+      register_func_code: "FC3"
+      register_labels:
+        modbus_type: uint16
