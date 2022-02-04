@@ -6,7 +6,7 @@ FROM golang:1.16-alpine AS builder
 # Install git. Git is required for fetching the dependencies.
 RUN apk update && apk add --no-cache git
 
-ENV APP_HOME /go/src/gitlab.dc.miran.ru/nuzhin/modbus_exporter
+ENV APP_HOME /go/src/github.com/nobled5/modbus_exporter
 WORKDIR $APP_HOME
 
 # Copy src.
@@ -31,7 +31,7 @@ RUN go get -d -v $APP_HOME/cmd/modbus_exporter/
 ARG ver="0.0.1"
 ARG branch="HEAD"
 ARG hash="hash"
-ARG user="nuzhin"
+ARG user="nobled5"
 ARG date="20060102-15:04:05"
 
 ENV VERSION   "-X github.com/prometheus/common/version.Version=$ver"
@@ -44,7 +44,7 @@ ENV DATE      "-X github.com/prometheus/common/version.BuildDate=$date"
 RUN GOOS=linux GOARCH=amd64 CGO_ENABLED=0 \
   go build \
   -ldflags="-w -s $VERSION $BRANCH $REVISION $USER $DATE" \
-  -o /go/bin/main /go/src/gitlab.dc.miran.ru/nuzhin/modbus_exporter/cmd/modbus_exporter/
+  -o /go/bin/main /go/src/github.com/nobled5/modbus_exporter/cmd/modbus_exporter/
 
 ##############################
 # STEP 2 build a small image #
