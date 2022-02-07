@@ -1,7 +1,9 @@
 # Modbus Exporter
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NobleD5/modbus_exporter/Go%20-%20Build%20and%20Test)
 [![codecov](https://codecov.io/gh/NobleD5/modbus_exporter/branch/main/graph/badge.svg?token=F4R3WH5VZ1)](https://codecov.io/gh/NobleD5/modbus_exporter)
+[![Docker - Image Build and Push](https://github.com/NobleD5/modbus_exporter/actions/workflows/docker-image-push.yml/badge.svg)](https://github.com/NobleD5/modbus_exporter/actions/workflows/docker-image-push.yml)
+[![Go - Build and Test](https://github.com/NobleD5/modbus_exporter/actions/workflows/go-build-test.yml/badge.svg)](https://github.com/NobleD5/modbus_exporter/actions/workflows/go-build-test.yml)
+[![CodeQL](https://github.com/NobleD5/modbus_exporter/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/NobleD5/modbus_exporter/actions/workflows/codeql-analysis.yml)
 
 An application for collecting metrics from devices using the MODBUS protocol and converting them to the native Prometheus format.
 
