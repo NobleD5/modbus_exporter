@@ -1,5 +1,7 @@
 # Modbus Exporter
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/NobleD5/modbus_exporter/Go%20-%20Build%20and%20Test)
+
 An application for collecting metrics from devices using the MODBUS protocol and converting them to the native Prometheus format.
 
 *The exporter is not an independent data collector, it works only in integration with Prometheus. See configuration below.*
