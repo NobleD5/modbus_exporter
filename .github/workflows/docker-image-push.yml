@@ -1,16 +1,13 @@
-name: Docker - Image Build and Push
+name: "Docker - Image Build and Push"
 
 on:
   push:
-    branches: [ main ]
-    # Publish semver tags as releases.
+    paths: ['**.go']
     tags: [ 'v*.*.*' ]
 
 env:
   REGISTRY: ghcr.io
-  # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
-
 
 jobs:
 
