@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/collector"
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/structures"
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/workload"
+	"github.com/NobleD5/modbus_exporter/pkg/collector"
+	"github.com/NobleD5/modbus_exporter/pkg/structures"
+	"github.com/NobleD5/modbus_exporter/pkg/workload"
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"

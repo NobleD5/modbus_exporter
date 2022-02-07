@@ -1,4 +1,4 @@
-module gitlab.dc.miran.ru/nuzhin/modbus_exporter
+module github.com/NobleD5/modbus_exporter
 
 go 1.16
 

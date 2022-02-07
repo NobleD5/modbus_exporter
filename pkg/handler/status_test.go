@@ -8,7 +8,7 @@ import (
 	"testing"
 	// "time"
 
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/logger"
+	"github.com/NobleD5/modbus_exporter/pkg/logger"
 )
 
 func TestStatus(t *testing.T) {

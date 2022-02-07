@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/structures"
+	"github.com/NobleD5/modbus_exporter/pkg/structures"
 
 	"github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"

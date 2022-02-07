@@ -11,10 +11,10 @@ import (
 	// "syscall"
 	"testing"
 
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/config"
-	// "gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/handler"
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/logger"
-	"gitlab.dc.miran.ru/nuzhin/modbus_exporter/pkg/structures"
+	"github.com/NobleD5/modbus_exporter/pkg/config"
+	// "github.com/NobleD5/modbus_exporter/pkg/handler"
+	"github.com/NobleD5/modbus_exporter/pkg/logger"
+	"github.com/NobleD5/modbus_exporter/pkg/structures"
 
 	// "github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
