@@ -23,7 +23,8 @@ jobs:
       - name: Test *.go-sources with cover
         run: |
           mkdir -p ./pkg/testdata/emptydir
-          ls -l
+          cd /home/runner/work/modbus_exporter
+          ll
           go get -v -d ..
           go test -covermode=count -coverprofile "coverage.out" ..
           go tool cover -func=coverage.out
