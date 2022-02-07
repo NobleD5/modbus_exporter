@@ -15,18 +15,6 @@ jobs:
   #   - name: Build the Docker image
   #     run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
 
-  # test:
-  #
-  #   runs-on: ubuntu-latest
-  #
-  #   steps:
-  #     - name: Test *.go-sources with cover
-  #       run: |
-  #         mkdir -p ./pkg/testdata/emptydir
-  #         go get -v -d $GITHUB_WORKSPACE/..
-  #         go test -covermode=count -coverprofile "coverage.out" $GITHUB_WORKSPACE/..
-  #         go tool cover -func=coverage.out
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -41,7 +29,9 @@ jobs:
         run: go build -v ./...
 
       - name: Test
-        run: go test -covermode=count -coverprofile "coverage.out" ./...
+        run: |
+          mkdir -p ./pkg/testdata/emptydir
+          go test -covermode=count -coverprofile "coverage.out" ./...
 
       - name: Cover
         run: go tool cover -func=coverage.out
