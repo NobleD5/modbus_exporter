@@ -23,7 +23,7 @@ jobs:
       - name: Test *.go-sources with cover
         run: |
           mkdir -p ./pkg/testdata/emptydir
-          echo ls -l
-          go get -v -d ./..
-          go test -covermode=count -coverprofile "coverage.out" ./..
+          ls -l
+          go get -v -d ..
+          go test -covermode=count -coverprofile "coverage.out" ..
           go tool cover -func=coverage.out
