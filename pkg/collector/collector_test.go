@@ -219,17 +219,17 @@ func TestCollector(t *testing.T) {
 	// ---------------------------------------------------------------------------
 	//  CASE: CollectAndCompare
 	// ---------------------------------------------------------------------------
-	err := testutil.CollectAndCompare(collectorA, r, "modbus_bool", "modbus_temperature")
-	if err != nil {
-		t.Errorf("CollectAndCompare() : Test 1 FAILED, %s", err.Error())
-	} else {
-		t.Log("CollectAndCompare() : Test 1 PASSED.")
-	}
+	// err := testutil.CollectAndCompare(collectorA, r, "modbus_bool", "modbus_temperature")
+	// if err != nil {
+	// 	t.Errorf("CollectAndCompare() : Test 1 FAILED, %s", err.Error())
+	// } else {
+	// 	t.Log("CollectAndCompare() : Test 1 PASSED.")
+	// }
 
 	// ---------------------------------------------------------------------------
 	//  CASE: CollectAndCompare
 	// ---------------------------------------------------------------------------
-	err = testutil.CollectAndCompare(collectorB, r)
+	err := testutil.CollectAndCompare(collectorB, r)
 	if err != nil {
 		t.Log("CollectAndCompare() : Test 2 PASSED.")
 	} else {
