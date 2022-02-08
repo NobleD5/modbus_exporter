@@ -112,7 +112,7 @@ func TestMisc(t *testing.T) {
 	// }
 
 	// ---------------------------------------------------------------------------
-	//  CASE: Successfull POSTing "/-/reload" without error and with proper response code
+	//  CASE: Successful POSTing "/-/reload" without error and with proper response code
 	// ---------------------------------------------------------------------------
 	resp, err = http.Post(reloadRoute.String(), "text/plain", strings.NewReader("body"))
 	if err != nil || resp.StatusCode != http.StatusAccepted {
@@ -142,7 +142,7 @@ func TestMisc(t *testing.T) {
 	}
 
 	// ---------------------------------------------------------------------------
-	//  CASE: Successfull POSTing "/-/quit" without error and with proper response code
+	//  CASE: Successful POSTing "/-/quit" without error and with proper response code
 	// ---------------------------------------------------------------------------
 	resp, err = http.Post(quitRoute.String(), "text/plain", strings.NewReader("body"))
 	if err != nil || resp.StatusCode != http.StatusOK {

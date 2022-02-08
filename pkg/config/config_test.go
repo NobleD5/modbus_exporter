@@ -76,7 +76,7 @@ func TestLoadDirectory(t *testing.T) {
 	logger = log.With(logger, "caller", log.DefaultCaller)
 
 	// ---------------------------------------------------------------------------
-	//  CASE: found dir'n'files and successfuly loading them
+	//  CASE: found dir'n'files and successfully loading them
 	// ---------------------------------------------------------------------------
 	_, err := LoadDirectory("../testdata/testdir", logger)
 	if err != nil {
