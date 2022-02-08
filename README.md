@@ -11,7 +11,10 @@ An application for collecting metrics from devices using the MODBUS protocol and
 
 ## Install
 #### Docker images
-TODO
+
+```
+docker pull ghcr.io/nobled5/modbus_exporter:latest
+```
 
 ## Run
 Binary:
